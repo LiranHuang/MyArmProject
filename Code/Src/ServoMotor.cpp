@@ -1,5 +1,5 @@
 #include "ServoMotor.h"
-#include "stm32f4xx_hal.h"
+#include "stm32f1xx_hal.h"
 #include <stdio.h>
 
 extern TIM_HandleTypeDef htim2;
