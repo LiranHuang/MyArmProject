@@ -7,7 +7,7 @@ extern TIM_HandleTypeDef htim2;
 ServoMotor::ServorMotor(int motorId, uint32_t pwmChannel)
     :id(motorId), angle(0), channel(pwmChannel){}
 
-void ServoMotor::SetAngle(int target){
+void ServoMotor::setAngle(int target){
     angle = target;
     uint32_t pulse = mapAngleToPulse(angle);
     __HAL_TIM_SET_COMPARE(&htim2, channel, pulse);
